@@ -3,20 +3,208 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>valentine 
-    <link rel="stylesheet" href="style.css">
+    <title>valentine · sedikit puisi</title>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        /* ========== CSS LANGSUNG DI SINI ========== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f0e2d4;
+            background-image: 
+                linear-gradient(#d2b89c 1px, transparent 1px),
+                linear-gradient(90deg, #d2b89c 1px, transparent 1px);
+            background-size: 40px 40px;
+            font-family: 'Cormorant Garamond', serif;
+            min-height: 100vh;
+            padding: 30px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .majalah {
+            max-width: 900px;
+            width: 100%;
+            background: #fcf7f0;
+            padding: 40px 45px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1), 
+                        0 0 0 1px #b49b82 inset, 
+                        0 0 0 2px #e8d9c6 inset;
+            border: 8px double #a5836a;
+        }
+
+        .header-majalah {
+            text-align: center;
+            border-bottom: 2px solid #b49b82;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+        }
+
+        .edisi {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.8rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: #6f4e3a;
+            margin-bottom: 5px;
+        }
+
+        .judul-utama {
+            font-size: 3.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 6px;
+            color: #3e2c1c;
+            line-height: 1.1;
+            margin-bottom: 5px;
+        }
+
+        .sub-judul {
+            font-size: 1.1rem;
+            font-style: italic;
+            color: #6f4e3a;
+            font-family: 'Inter', sans-serif;
+            font-weight: 300;
+        }
+
+        .halaman-puisi-full {
+            background: #fffbf5;
+            padding: 35px 40px;
+            border: 1px solid #bba98c;
+            box-shadow: 4px 4px 0 #e0cfbc inset, -2px -2px 0 #e0cfbc inset;
+            margin: 30px 0 25px;
+        }
+
+        .puisi-panjang {
+            font-size: 1.3rem;
+            line-height: 2;
+            color: #2f241b;
+            font-weight: 500;
+            text-align: left;
+        }
+
+        .awalan-besar {
+            font-size: 4.5rem;
+            float: left;
+            line-height: 0.8;
+            margin-right: 10px;
+            color: #8b5a3c;
+            font-weight: 700;
+        }
+
+        .tanda-tangan {
+            display: block;
+            margin-top: 30px;
+            text-align: right;
+            font-style: italic;
+            font-size: 1.2rem;
+            color: #8b5a3c;
+        }
+
+        .galeri-mini {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin: 25px 0 30px;
+            flex-wrap: wrap;
+        }
+
+        .foto-mini {
+            width: 120px;
+            text-align: center;
+        }
+
+        .foto-mini img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            border: 2px solid #b49b82;
+            padding: 5px;
+            background: white;
+            box-shadow: 5px 5px 0 #dac0a9;
+            transition: transform 0.3s ease;
+        }
+
+        .foto-mini img:hover {
+            transform: scale(1.02);
+        }
+
+        .mini-caption {
+            display: block;
+            font-size: 0.7rem;
+            font-family: 'Inter', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-top: 6px;
+            color: #5f4635;
+        }
+
+        .footer-majalah {
+            border-top: 2px solid #b49b82;
+            padding-top: 25px;
+            margin-top: 15px;
+        }
+
+        .audio-wrapper {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        audio {
+            width: 100%;
+            max-width: 350px;
+            height: 40px;
+            filter: sepia(0.3);
+        }
+
+        .kolofon {
+            display: flex;
+            justify-content: space-between;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.7rem;
+            color: #7d624b;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            border-top: 1px dashed #c9b39c;
+            padding-top: 15px;
+        }
+
+        .tombol-ganti {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #4f3a2a;
+            cursor: pointer;
+            width: fit-content;
+            padding: 8px 20px;
+            margin: 20px 0 10px auto;
+            border: 1px solid #b49b82;
+            background: #f2e2d2;
+            transition: 0.3s;
+        }
+
+        .tombol-ganti:hover {
+            background: #e5cfbb;
+        }
+    </style>
 </head>
 <body>
     <div class="majalah">
-        <!-- HEADER VALENTINE -->
+        <!-- HEADER -->
         <div class="header-majalah">
             <div class="edisi">valentine · 14 februari 2026</div>
             <h1 class="judul-utama">sedikit puisi</h1>
             <div class="sub-judul">dari akuu</div>
         </div>
 
-        <!-- PUISI PANJANG SATU HALAMAN FULL -->
+        <!-- PUISI -->
         <div class="halaman-puisi-full" id="puisiFull">
             <div class="puisi-panjang" id="puisiKonten">
                 <span class="awalan-besar">A</span>a, aku menulis ini bukan karena hari ini valentine.<br>
@@ -79,7 +267,10 @@ dalam hidupku.<br><br>
             </div>
         </div>
 
-        <!-- 3 FOTO MINI DI BAWAH -->
+        <!-- TOMBOL GANTI PUISI -->
+        <div class="tombol-ganti" id="gantiPuisi">ganti puisi</div>
+
+        <!-- 3 FOTO MINI -->
         <div class="galeri-mini">
             <div class="foto-mini">
                 <img src="foto1.jpg" alt="foto 1">
@@ -95,7 +286,7 @@ dalam hidupku.<br><br>
             </div>
         </div>
 
-        <!-- AUDIO PLAYER -->
+        <!-- AUDIO -->
         <div class="footer-majalah">
             <div class="audio-wrapper">
                 <audio id="lagu" controls loop>
@@ -109,6 +300,52 @@ dalam hidupku.<br><br>
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        // ========== JAVASCRIPT LANGSUNG DI SINI ==========
+        document.addEventListener('DOMContentLoaded', function() {
+            const puisiKonten = document.getElementById('puisiKonten');
+            const tombolGanti = document.getElementById('gantiPuisi');
+
+            if (puisiKonten && tombolGanti) {
+                const kumpulanPuisi = [
+                    `Aa, kalau aku jadi hujan,
+aku akan turun pelan-pelan
+biar Aa punya waktu
+untuk berlindung di hatiku.`,
+
+                    `Aa tahu bedanya aku sama kopi?
+Kopi pahit kalau nggak ada gula.
+Tapi aku tetap manis,
+karena Aa selalu ada di doa.`,
+
+                    `Malam ini aku nggak bisa tidur,
+bukan karena kopi,
+tapi karena mikirin Aa
+yang tidurnya nyenyak
+tanpa tahu kalau aku rindu.`,
+
+                    `Cinta itu nggak selalu keras, Aa.
+Kadang cukup pelan,
+seperti napas yang nggak terasa,
+tapi kalau berhenti, mati.`
+                ];
+
+                tombolGanti.addEventListener('click', function() {
+                    const randomIndex = Math.floor(Math.random() * kumpulanPuisi.length);
+                    const puisiBaru = kumpulanPuisi[randomIndex];
+                    const firstLetter = puisiBaru.charAt(0);
+                    const restText = puisiBaru.slice(1);
+                    
+                    puisiKonten.innerHTML = `<span class="awalan-besar">${firstLetter}</span>${restText}<br><br><span class="tanda-tangan">— dari akuu</span>`;
+                });
+            }
+
+            // Volume audio
+            const audio = document.getElementById('lagu');
+            if (audio) {
+                audio.volume = 0.5;
+            }
+        });
+    </script>
 </body>
 </html>
